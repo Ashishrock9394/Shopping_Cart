@@ -20,6 +20,10 @@ nav{
     top: 0;
     left: 0;
 }
+nav a{
+    color: white;
+    text-decoration: none;
+}
 
 nav div{
     display: flex;
@@ -33,9 +37,8 @@ nav div a{
     border-radius: 4px;
 }
 
-.active{
-    background: #fff;
-    color: #000;
+nav div .active{
+    color: blue;
 }
 
 
