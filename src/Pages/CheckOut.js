@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import CartItems from '../Components/CartItems.js';
 import { clearAll, addItem } from '../Redux/Actions/cartAction.js';
 
+import Swal from 'sweetalert2'
+
 
 const CheckOut = () => {
   const [total, setTotal] = useState(0);
@@ -32,6 +34,25 @@ const CheckOut = () => {
     dispatch(clearAll());
     localStorage.clear();
     setcheckedOut(true);
+    Swal.fire({
+      title: 'Are you sure to checkout?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Thanks For Shopping!',
+          '',
+          'success'
+        ).then(function() {
+          window.location = "/";
+        });
+      }
+    });
   }
   return (
     <div>
