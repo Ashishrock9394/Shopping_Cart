@@ -10,7 +10,7 @@ A simple shopping cart Webpage with items page and cart page created by using Re
 
 ## Deployment Link
 
-- [@Clikh Here](https://shopping-cart-lemon-sigma.vercel.app/)
+- [@Click Here](https://shopping-cart-lemon-sigma.vercel.app/)
 
 
 ## Environment Variables
